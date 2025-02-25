@@ -1,0 +1,184 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+:root {
+    --black: #0A0A0A;
+    --brown: #4A2C2A;
+    --light-brown: #BC8A5F;
+    --cream: #F5E6D3;
+    --white: #FFFFFF;
+}
+
+body {
+    background-color: var(--black);
+    color: var(--white);
+}
+
+.nav-links {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.nav-links a {
+    color: var(--cream);
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 15px;
+    letter-spacing: 0.5px;
+    padding: 10px 20px;
+    border-radius: 8px;
+    transition: 0.3s;
+    background: rgba(255, 255, 255, 0.05); /* Subtle background */
+}
+
+.nav-links a:hover {
+    background: var(--light-brown);
+    color: var(--white);
+    transform: scale(1.05);
+}
+/* Checkout Page */
+.checkout-container {
+    max-width: 900px;
+    margin: 100px auto;
+    background: linear-gradient(145deg, #1a1a1a, #0d0d0d);
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(188, 138, 95, 0.1);
+    border: 1px solid rgba(188, 138, 95, 0.2);
+}
+
+.checkout-title {
+    font-size: 2.5em;
+    color: var(--cream);
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.checkout-items {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.checkout-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    background: var(--brown);
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.checkout-item:hover {
+    background: var(--light-brown);
+}
+
+.item-details {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.item-image {
+    width: 80px;
+    height: 80px;
+    border-radius: 10px;
+    background: var(--cream);
+    object-fit: cover;
+}
+
+.item-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.item-name {
+    font-size: 1.2em;
+    color: var(--cream);
+    font-weight: 600;
+}
+
+.item-price {
+    color: var(--light-brown);
+    font-size: 1em;
+}
+
+.remove-item {
+    background: none;
+    border: none;
+    color: var(--cream);
+    font-size: 0.9em;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.remove-item:hover {
+    color: var(--light-brown);
+}
+
+/* Checkout Summary */
+.checkout-summary {
+    margin-top: 30px;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+}
+
+.summary-text {
+    font-size: 1.2em;
+    color: var(--cream);
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.checkout-button {
+    width: 100%;
+    padding: 15px;
+    background: var(--light-brown);
+    border: none;
+    border-radius: 10px;
+    color: var(--white);
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+    font-size: 1.2em;
+    margin-top: 15px;
+}
+
+.checkout-button:hover {
+    background: var(--brown);
+    transform: scale(1.02);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .checkout-container {
+        padding: 20px;
+    }
+
+    .checkout-title {
+        font-size: 2em;
+    }
+
+    .item-image {
+        width: 60px;
+        height: 60px;
+    }
+
+    .item-name {
+        font-size: 1em;
+    }
+
+    .checkout-button {
+        font-size: 1em;
+    }
+}
